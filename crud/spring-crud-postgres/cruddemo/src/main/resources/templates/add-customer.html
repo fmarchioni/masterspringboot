@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Add Customer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    </head>
+    <body>
+        <div>
+            <h2>New Customer</h2>
+            <div>
+                <div>
+                    <form action="#" th:action="@{/addcustomer}" th:object="${customer}" method="post">
+                        <div class="row">
+                            <div >
+                                <label for="name">Name</label>
+                                <input type="text" th:field="*{name}" id="name" placeholder="Name">
+                                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" ></span>
+                            </div>
+                            <div >
+                                <label for="surname" class="col-form-label">Surname</label>
+                                <input type="text" th:field="*{surname}"  id="surname" placeholder="Surname">
+                                <span th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}" ></span>
+                            </div>
+                            <div >
+                                <label for="email" class="col-form-label">Email</label>
+                                <input type="text" th:field="*{email}"  id="email" placeholder="Email">
+                                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" ></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div >
+                                <input type="submit"  value="Add Customer">
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
