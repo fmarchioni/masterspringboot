@@ -1,0 +1,3 @@
+== Simple Hystrix Demo
+
+Source code for tutorial: http://www.masterspringboot.com/hystrix/getting-started-with-spring-boot-and-hystrix
