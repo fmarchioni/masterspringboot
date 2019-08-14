@@ -1,0 +1,3 @@
+== Simple Hystrix Demo
+
+Source code for tutorial: http://www.masterspringboot.com/hystrix/configuring-hystrix-dashboard-in-your-spring-boot-application
