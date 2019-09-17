@@ -1,3 +1,6 @@
 == Spring Cloud with Eureka Client Server and Ribbon Load balancer
 
-Source code for tutorial: http://www.masterspringboot.com/cloud/netflix/service-discovery-with-netflix-eureka-and-ribbon-client-load-balancer
+Source code for the following tutorials: 
+
+* http://www.masterspringboot.com/cloud/netflix/service-discovery-with-netflix-eureka-and-ribbon-client-load-balancer
+* http://www.masterspringboot.com/cloud/netflix/netflix-feign-client
