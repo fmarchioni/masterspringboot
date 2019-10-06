@@ -1,0 +1,3 @@
+== Spring Boot REST Hello world
+
+* Source code for tutorial: http://www.masterspringboot.com/develop-applications/rest-services/spring-boot-hello-world-rest-service
