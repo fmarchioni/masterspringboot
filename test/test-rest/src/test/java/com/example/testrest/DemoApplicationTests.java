@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.get;
 import static org.hamcrest.CoreMatchers.is;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class DemoApplicationTests {
 
 	@Test
