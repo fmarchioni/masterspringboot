@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
+<style>
 
 table.blueTable {
   border: 1px solid #1C6EA4;
@@ -69,47 +69,80 @@ table.blueTable tfoot .links a{
 <body>
 
 <div id="app">
-
-    <table class="blueTable">
-        <thead >
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Surname</th>
-
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="user in users" :key="user.id">
-            <td>{{user.id}}</td>
-            <td>{{user.name}}</td>
-            <td>{{user.surname}}</td>
-         </tr>
-        </tbody>
-    </table>
+    <div v-html="userTable"></div>
 </div>
 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 <script>
+// register the grid component
 new Vue({
-  el: "#app",
-  data() {
-  	return {
-    	users: []
+  el: '#app',
+  data: {
+    users: []
+  },
+  computed: {
+    userTable() {
+      // actually inserting the HTML in the template
+      return this.createTable(this.users)
     }
   },
-  mounted: function() {
-      axios
-        .get('http://localhost:8080/list')
-        .then(response => {
-          this.users = response.data
+  methods: {
+    getUsers() {
+      // getting JSON data from API
+      return new Promise((resolve, reject) => {
+        const users = fetch('http://localhost:8080/list')
+          .then(response => response.json())
+          .then(json => {
+            resolve(json)
+          })
+      })
+    },
+    userRowHtml(user) {
+      // creating a single table row of user data
+      if (user) {
+        let html = ''
+        Object.entries(user).forEach(e => {
+            html += `<td>${e[1]}</td>`
         })
-        .catch(function (error) {
-          console.log(error);
+        return html
+      }
+      return ''
+    },
+    userRows(users) {
+      // creating the table rows for user data
+      if (users && users.length) {
+        let html = ''
+        users.forEach(e => {
+          html += `<tr>${this.userRowHtml(e)}</tr>`
         })
+        return html
+      }
+      return ''
+    },
+    createTable(users) {
+      // creating the table to insert
+      if (users && users.length) {
+        const headers = Object.keys(this.users[0])
+        let html = ''
+        html += '<table class="blueTable"><thead><tr>'
+        headers.forEach(e => {
+          html += `<th>${e}</th>`
+        })
+        html += '</tr></thead>'
+        html += '<tbody>'
+        html += this.userRows(users)
+        html += '</tbody></table>'
+        return html
+      }
+      return ''
     }
+  },
+  async mounted() {
+    this.users = await this.getUsers()
+  }
 })
+
 </script>
 
 
