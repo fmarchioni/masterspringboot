@@ -1,0 +1,3 @@
+=== Example of using Spring Boot and Solr
+
+* Code from: http://www.masterspringboot.com/data-access/no-sql-databases/getting-started-with-solr-and-spring-boot
