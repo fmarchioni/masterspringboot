@@ -1,0 +1,3 @@
+== Example of Configuring a custom HttpMessageConverter in SpringBoot
+
+Source: http://www.masterspringboot.com/develop-applications/web-development/configuring-a-custom-httpmessageconverter-in-springboot
