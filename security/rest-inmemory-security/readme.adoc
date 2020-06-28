@@ -1,0 +1,3 @@
+== Spring Boot in-memory security
+
+Source code for http://www.masterspringboot.com/security/authentication/spring-boot-security-part-1-in-memory-basic-authentication
