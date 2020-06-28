@@ -10,3 +10,6 @@ target/
 .dockerignore
 .pom.xml.swp
 .mvn/*
+.mvn/wrapper
+mvnw
+mvnw.cmd
