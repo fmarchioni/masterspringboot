@@ -35,7 +35,7 @@ public class DemoApplicationTests {
 		printJSON(response);
 
 		//Verify user is authorized and content is JSON
-//		assertEquals(MediaType.APPLICATION_JSON_UTF8, response.getHeaders().getContentType());
+		assertEquals(MediaType.APPLICATION_JSON_UTF8, response.getHeaders().getContentType());
 
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
