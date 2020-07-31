@@ -1,3 +1,3 @@
-== Spring Boot in-memory security
+== Spring Boot LDAP security
 
-Source code for http://www.masterspringboot.com/security/authentication/securing-spring-boot-with-in-memory-basic-authentication
+Source code for this tutorial: http://www.masterspringboot.com/security/authentication/securing-spring-boot-applications-with-ldap
