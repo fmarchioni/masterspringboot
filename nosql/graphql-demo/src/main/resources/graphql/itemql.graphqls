@@ -1,0 +1,15 @@
+type Item {
+	id: ID!,
+	type: String,
+	model: String,
+	price: Int!
+}
+
+type Query {
+	items(count: Int):[Item]
+	item(id: ID):Item
+}
+
+type Mutation {
+	createItem(type: String!, model: String!, price: Int!):Item
+}
