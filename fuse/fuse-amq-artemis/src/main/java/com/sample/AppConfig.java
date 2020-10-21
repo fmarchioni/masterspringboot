@@ -1,9 +1,9 @@
 package com.sample;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 import org.apache.camel.component.jms.JmsComponent;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 

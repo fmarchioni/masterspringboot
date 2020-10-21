@@ -44,22 +44,16 @@
             <scope>provided</scope>
         </dependency>
 
-
-
-
-
         <dependency>
             <groupId>org.apache.activemq</groupId>
             <artifactId>artemis-jms-client</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-jms-starter -->
+
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-jms-starter</artifactId>
             <version>2.25.2</version>
         </dependency>
-
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
