@@ -1,0 +1,10 @@
+package rules
+
+import com.example.droolsdemo.Server
+rule "Check Server Configuration"
+  when
+  $server : Server( processors < 2 || memory<=1024 || diskspace <= 2048)
+  then
+  $server.setValid(false);
+  System.out.println("Server "+ $server.getName() + " configuration does not meet requirements!");
+end
