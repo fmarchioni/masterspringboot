@@ -20,7 +20,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.masterspringboot</groupId>
-			<artifactId>banner-service-spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-banner-service</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 
