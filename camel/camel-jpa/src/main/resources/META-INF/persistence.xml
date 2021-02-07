@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="persistenceUnit"
+                      transaction-type="RESOURCE_LOCAL">
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/cameldb" /> <!-- BD Mane -->
+            <property name="javax.persistence.jdbc.user" value="camel" /> <!-- DB User -->
+            <property name="javax.persistence.jdbc.password" value="camel" /> <!-- DB Password -->
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/> <!-- DB Dialect -->
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" /> <!-- create / create-drop / update -->
+
+            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+        </properties>
+
+    </persistence-unit>
+
+
+</persistence>

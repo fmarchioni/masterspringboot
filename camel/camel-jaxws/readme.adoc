@@ -1,0 +1,3 @@
+== Camel Route invoking JAX-WS Demo
+
+Source code for: http://www.masteringintegration.com/apache-frameworks/camel/calling-a-jax-ws-web-service-from-camel

@@ -1,0 +1,24 @@
+== CXF WebService Proxy example
+
+=== Introduction
+
+This is a modified version of the CXF WebService Proxy Example from Camel distribution (https://github.com/apache/camel-examples/tree/master/examples/camel-example-cxf-proxy)
+
+Instead of using a Camel proxy as target endpoint, we use a JAX-WS Web service which is deployed in a Java EE Container.
+
+=== Run
+
+Deploy at first the targetWS project.
+
+The proxied webservice should be located at: http://localhost:8080/targetWS/ReportIncidentEndpointService
+
+....
+http://localhost:8080/camel-example-cxf-proxy/webservices/incident
+....
+
+Run the test with:
+
+....
+mvn clean install
+....
+

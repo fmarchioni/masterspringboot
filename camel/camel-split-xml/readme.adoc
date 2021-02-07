@@ -1,0 +1,2 @@
+== Camel HelloWorld demo
+Source code for http://www.masteringintegration.com/apache-frameworks/camel/splitting-xml-with-camel

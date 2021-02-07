@@ -1,0 +1,2 @@
+== MasteringIntegration
+Camel examples for http://www.masterspringboot.com

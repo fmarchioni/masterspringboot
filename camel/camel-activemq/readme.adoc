@@ -1,0 +1,3 @@
+== Camel Example with remote ActiveMQ
+
+Source code for http://www.masteringintegration.com/apache-frameworks/camel/building-a-camel-route-to-remote-activemq

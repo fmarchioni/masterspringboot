@@ -1,0 +1,14 @@
+<catalog>
+  <book id="id100">
+    <author age="44">John Smith</author>
+    <title>Java Developer's Guide</title>
+    <genre>Computer</genre>
+    <price>11.95</price>
+  </book>
+  <book id="id101">
+    <author age="24">Sally Joy</author>
+    <title>A tale</title>
+    <genre>Fantasy</genre>
+    <price>1.95</price>
+  </book>
+</catalog>
