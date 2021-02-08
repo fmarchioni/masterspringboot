@@ -1,0 +1,3 @@
+== Red Hat Fuse 7 with Spring Boot Demo
+
+Source code for this tutorial: http://www.masterspringboot.com/various/red-hat-fuse/creating-jboss-fuse-projects-with-red-hat-code-ready-studio
