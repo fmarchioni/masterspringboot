@@ -1,2 +1,2 @@
-== Camel HelloWorld demo
-Source code for http://www.masterspringboot.com/various/camel/building-a-camel-route-to-remote-activemq
+== Camel Bean demo
+Source code for www.masterspringboot.com/various/camel/camel-bean-example
