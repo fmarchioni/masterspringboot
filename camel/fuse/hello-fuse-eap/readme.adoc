@@ -1,0 +1,3 @@
+== Fuse 7 demo on EAP
+
+Source code for http://www.masterspringboot.com/various/red-hat-fuse/hello-world-jboss-fuse-7-application-on-jboss-eap
