@@ -1,2 +1,2 @@
 == Camel HelloWorld demo
-Source code for http://www.masteringintegration.com/testing-frameworks/camel/helloworld-camel-tutorial
+Source code for http://www.masterspringboot.com/various/camel/building-a-camel-route-to-remote-activemq
