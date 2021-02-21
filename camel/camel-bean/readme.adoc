@@ -1,2 +1,2 @@
-== Camel HelloWorld demo
-Source code for http://www.masteringintegration.com/testing-frameworks/camel/helloworld-camel-tutorial
+== Camel Bean demo
+Source code for www.masterspringboot.com/various/camel/camel-bean-example

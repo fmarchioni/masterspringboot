@@ -13,3 +13,4 @@ For more help see the Apache Camel documentation
 
     http://camel.apache.org/
 
+Tutorial for this example: http://www.masterspringboot.com/various/camel/consuming-and-producing-kafka-messages-from-camel

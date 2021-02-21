@@ -1,0 +1,3 @@
+== Proxy Web Services request with Camel 
+
+Source code for http://www.masterspringboot.com/various/camel/proxy-web-services-request-with-camel

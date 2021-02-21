@@ -1,2 +1,2 @@
-== Camel HelloWorld demo
-Source code for http://www.masteringintegration.com/apache-frameworks/camel/splitting-xml-with-camel
+== Camel Split XML Demo
+Source code for www.masterspringboot.com/various/camel/splitting-xml-with-camel
