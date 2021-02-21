@@ -14,9 +14,6 @@ public class MyRouteBuilder extends RouteBuilder {
                 .bean(new MyBean(), "setTime(${body})")
                 .bean(new MyBean(), "done()");
 
-
-
-
     }
 
 }
