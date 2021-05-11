@@ -1,2 +1,2 @@
-== Camel HelloWorld demo
-Source code for http://www.masterspringboot.com/various/camel/helloworld-camel-tutorial
+== Camel File demo
+Source code for http://www.masterspringboot.com/various/camel/using-camel-file-component-to-transfer-files
