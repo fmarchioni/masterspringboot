@@ -9,14 +9,14 @@ import org.apache.camel.component.kafka.KafkaConstants;
 public class MyRouteBuilder extends RouteBuilder {
 
     /**
-     * Let's configure the Camel routing rules using Java code...
+     * Let's configure the Camel routing rules using Java code 
      */
     @Override
     public void configure() throws Exception {
 
-        // Kafka Producer
+        // Kafka Producer using Message key
         from("file:src/data?noop=true")
-                 .setHeader(KafkaConstants.KEY, constant("Camel")) // Key of the message
+                 .setHeader(KafkaConstants.KEY, constant("Camel")) 
                 .to("kafka:myTopic?brokers=localhost:9092");
 
         // Kafka Consumer
