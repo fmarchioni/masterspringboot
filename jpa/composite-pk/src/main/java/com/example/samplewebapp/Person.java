@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Entity
 @IdClass(PersonId.class)
 public class Person {
+	
     @Id
     String name;
     @Id

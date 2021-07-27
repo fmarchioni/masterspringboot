@@ -3,7 +3,10 @@ package com.example.samplewebapp;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class PersonId implements Serializable {
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class CustomerEmbeddable implements Serializable {
     String name;
     String surname;
 
@@ -17,7 +20,7 @@ public class PersonId implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		PersonId other = (PersonId) obj;
+		CustomerEmbeddable other = (CustomerEmbeddable) obj;
 		if (name == null) {
 			if (other.name != null)
 				return false;
@@ -40,10 +43,10 @@ public class PersonId implements Serializable {
 		return result;
 	}
 
-    public PersonId() {
+    public CustomerEmbeddable() {
     }
 
-    public PersonId(String name, String surname) {
+    public CustomerEmbeddable(String name, String surname) {
         this.name = name;
         this.surname = surname;
     }
