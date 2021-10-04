@@ -1,9 +1,6 @@
 package com.sample.ehcache.rest;
 
-import java.time.temporal.ChronoUnit;
-import java.util.List;
-
-import org.springframework.cache.annotation.CachePut;
+ 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,7 +33,7 @@ public class CacheController {
 	@GetMapping("/put/{id}")
 	public ResponseEntity<Long> add(@PathVariable long id) {
 
-		Long fact = cacheService.updateBook(id);
+		Long fact = cacheService.update(id);
 
 		return new ResponseEntity<>(
 				fact,
