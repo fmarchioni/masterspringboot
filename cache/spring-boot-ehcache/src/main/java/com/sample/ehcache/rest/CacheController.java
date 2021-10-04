@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/authors")
+@RequestMapping("/numbers")
 public class CacheController {
 	private final CacheService cacheService;
 
