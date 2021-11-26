@@ -5,4 +5,4 @@ This example shows how to call a REST service using Camel Rest.
 The example uses a timer to trigger a Camel route to call the REST service.
 The REST service is embedded within Spring Boot itself so it can run standalone.
 
-Read more: http://www.masterspringboot.com/camel/camel-with-spring-boot-example-masterspringboot/
+Read more: http://www.masterspringboot.com/camel/apache-camel-rest-example-for-beginners/
