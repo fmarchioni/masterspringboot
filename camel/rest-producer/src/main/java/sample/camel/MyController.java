@@ -5,16 +5,25 @@ import java.security.SecureRandom;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MyController {
 
-	@GetMapping(value = "/example/{id}")
+	@GetMapping(value = "/random/{id}")
 	public String getRandomString(@PathVariable("id") Integer id) {
-		return "Got " + randomString(id);
+		return "HTTP GET Got " + randomString(id);
 	}
 
+
+	   
+	@PostMapping("/time")
+	public String getTime(@RequestBody Timer data) {
+		return "HTTP POST Got " + data.getData();
+	}
+	
 	String randomString(int len) {
 		String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 		SecureRandom rnd = new SecureRandom();

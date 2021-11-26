@@ -16,9 +16,10 @@
  */
 package sample.camel;
 
-import java.util.UUID;
-
+import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.jackson.JacksonDataFormat;
+
 import org.springframework.stereotype.Component;
 
 /**
@@ -28,15 +29,18 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class RestRoute extends RouteBuilder {
+	JacksonDataFormat jsonDataFormat = new JacksonDataFormat(Timer.class);
 
-    @Override
-    public void configure() throws Exception {
-        restConfiguration().host("localhost").port(8080);
+	@Override
+	public void configure() throws Exception {
+		restConfiguration().host("localhost").port(8080);
 
-        from("timer:hello?period={{timer.period}}")
-            .setHeader("id", simple("${random(6,9)}"))
-            .to("rest:get:example/{id}")
-            .log("${body}");
-    }
+		from("timer:timer1?period={{timer.period}}").setHeader("id", simple("${random(6,9)}"))
+				.to("rest:get:random/{id}").log("${body}");
+
+		from("timer://timer2?period={{timer.period}}").setBody().simple("Current time is ${header.firedTime}")
+				.process(new TimerProcessor()).marshal(jsonDataFormat).to("rest:post:time").log("${body}");
+
+	}
 
 }
