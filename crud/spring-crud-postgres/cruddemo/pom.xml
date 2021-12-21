@@ -46,6 +46,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework.experimental/spring-graalvm-native -->
+<dependency>
+    <groupId>org.springframework.experimental</groupId>
+    <artifactId>spring-graalvm-native</artifactId>
+    <version>0.8.2</version>
+</dependency>
+
 	</dependencies>
 
 	<build>
@@ -54,63 +61,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
- <plugin>
-                <!-- Automatically start PostgreSQL for integration testing - requires Docker -->
-                <groupId>io.fabric8</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.33.0</version>
-                <configuration>
-                    <skip>false</skip>
-                    <images>
-                        <image>
-                            <name>postgres:10.5</name>
-                            <alias>postgresql</alias>
-                            <run>
-                                <env>
-                                    <POSTGRES_USER>postgres</POSTGRES_USER>
-                                    <POSTGRES_PASSWORD>postgres</POSTGRES_PASSWORD>
-                                    <POSTGRES_DB>postgres</POSTGRES_DB>
-                                </env>
-                                <ports>
-                                    <port>5432:5432</port>
-                                </ports>
-                                <log>
-                                    <prefix>PostgreSQL: </prefix>
-                                    <date>default</date>
-                                    <color>cyan</color>
-                                </log>
-                                <wait>
-                                    <tcp>
-                                        <mode>mapped</mode>
-                                        <ports>
-                                            <port>5432</port>
-                                        </ports>
-                                    </tcp>
-                                    <time>10000</time>
-                                </wait>
-                            </run>
-                        </image>
-                    </images>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>docker-start</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>stop</goal>
-                            <goal>start</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>docker-stop</id>
-                        <phase>post-integration-test</phase>
-                        <goals>
-                            <goal>stop</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+  
 		</plugins>
 	</build>
-
+<profiles>
+<profile> <id>graal</id> <build> <plugins> <plugin> <groupId>org.graalvm.nativeimage</groupId> <artifactId>native-image-maven-plugin</artifactId> <version>21.2.0</version> <configuration> <buildArgs> -Dspring.graal.mode=initialization-only -Dspring.graal.dump-config=/tmp/computed-reflect-config.json -Dspring.graal.verbose=true -Dspring.graal.skip-logback=true --initialize-at-run-time=org.springframework.data.r2dbc.connectionfactory.ConnectionFactoryUtils --initialize-at-build-time=io.r2dbc.spi.IsolationLevel,io.r2dbc.spi --initialize-at-build-time=io.r2dbc.spi.ConstantPool,io.r2dbc.spi.Assert,io.r2dbc.spi.ValidationDepth --initialize-at-build-time=org.springframework.data.r2dbc.connectionfactory -H:+TraceClassInitialization --no-fallback --allow-incomplete-classpath --report-unsupported-elements-at-runtime -H:+ReportExceptionStackTraces --no-server --initialize-at-build-time=org.reactivestreams.Publisher --initialize-at-build-time=com.example.reactive.ReservationRepository --initialize-at-run-time=io.netty.channel.unix.Socket --initialize-at-run-time=io.netty.channel.unix.IovArray --initialize-at-run-time=io.netty.channel.epoll.EpollEventLoop --initialize-at-run-time=io.netty.channel.unix.Errors </buildArgs> </configuration> <executions> <execution> <goals> <goal>native-image</goal> </goals> <phase>package</phase> </execution> </executions> </plugin> <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> </plugin> </plugins> </build> </profile></profiles>
 </project>
