@@ -1,0 +1,2 @@
+== Camel HTTP Component example
+Tutorial for this example: http://www.masterspringboot.com/camel/how-to-use-camel-http-component/
