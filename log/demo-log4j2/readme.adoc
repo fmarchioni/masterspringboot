@@ -1,0 +1,3 @@
+== Spring Boot with Log4j2 example
+
+Code for article: http://www.masterspringboot.com/configuration/logging/configuring-springboot-to-use-log4j/
