@@ -10,3 +10,15 @@
 2022-02-19 18:55:21,370 DEBUG c.e.d.CustomerRepository [main] Added Customer : Customer{id=1, name='frank'}
 2022-02-19 18:55:21,372 DEBUG c.e.d.CustomerRepository [main] Added Customer : Customer{id=2, name='john'}
 2022-02-19 18:55:21,511 INFO c.e.d.DemoApplication [main] Started DemoApplication in 0.752 seconds (JVM running for 1.306)
+2022-02-20 10:41:41,142 INFO c.e.d.DemoApplicationTests [main] Starting DemoApplicationTests using Java 11 on fedora with PID 6925 (started by francesco in /home/francesco/git/masterspringboot/log/demo-log4j2)
+2022-02-20 10:41:41,149 DEBUG c.e.d.DemoApplicationTests [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-20 10:41:41,149 INFO c.e.d.DemoApplicationTests [main] No active profile set, falling back to default profiles: default
+2022-02-20 10:41:41,678 DEBUG c.e.d.CustomerRepository [main] Added Customer : Customer{id=1, name='frank'}
+2022-02-20 10:41:41,682 DEBUG c.e.d.CustomerRepository [main] Added Customer : Customer{id=2, name='john'}
+2022-02-20 10:41:42,177 INFO c.e.d.DemoApplicationTests [main] Started DemoApplicationTests in 1.241 seconds (JVM running for 2.455)
+2022-02-20 10:41:46,438 INFO c.e.d.DemoApplication [main] Starting DemoApplication using Java 11 on fedora with PID 6995 (/home/francesco/git/masterspringboot/log/demo-log4j2/target/classes started by francesco in /home/francesco/git/masterspringboot/log/demo-log4j2)
+2022-02-20 10:41:46,441 DEBUG c.e.d.DemoApplication [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-20 10:41:46,442 INFO c.e.d.DemoApplication [main] No active profile set, falling back to default profiles: default
+2022-02-20 10:41:46,937 DEBUG c.e.d.CustomerRepository [main] Added Customer : Customer{id=1, name='frank'}
+2022-02-20 10:41:46,939 DEBUG c.e.d.CustomerRepository [main] Added Customer : Customer{id=2, name='john'}
+2022-02-20 10:41:47,086 INFO c.e.d.DemoApplication [main] Started DemoApplication in 0.838 seconds (JVM running for 1.417)
