@@ -5,7 +5,7 @@
         <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-	        <version>2.6.1</version>
+	        <version>2.6.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
@@ -46,12 +46,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/org.springframework.experimental/spring-graalvm-native -->
-<dependency>
-    <groupId>org.springframework.experimental</groupId>
-    <artifactId>spring-graalvm-native</artifactId>
-    <version>0.8.2</version>
-</dependency>
 
 	</dependencies>
 
@@ -64,6 +58,5 @@
   
 		</plugins>
 	</build>
-<profiles>
-<profile> <id>graal</id> <build> <plugins> <plugin> <groupId>org.graalvm.nativeimage</groupId> <artifactId>native-image-maven-plugin</artifactId> <version>21.2.0</version> <configuration> <buildArgs> -Dspring.graal.mode=initialization-only -Dspring.graal.dump-config=/tmp/computed-reflect-config.json -Dspring.graal.verbose=true -Dspring.graal.skip-logback=true --initialize-at-run-time=org.springframework.data.r2dbc.connectionfactory.ConnectionFactoryUtils --initialize-at-build-time=io.r2dbc.spi.IsolationLevel,io.r2dbc.spi --initialize-at-build-time=io.r2dbc.spi.ConstantPool,io.r2dbc.spi.Assert,io.r2dbc.spi.ValidationDepth --initialize-at-build-time=org.springframework.data.r2dbc.connectionfactory -H:+TraceClassInitialization --no-fallback --allow-incomplete-classpath --report-unsupported-elements-at-runtime -H:+ReportExceptionStackTraces --no-server --initialize-at-build-time=org.reactivestreams.Publisher --initialize-at-build-time=com.example.reactive.ReservationRepository --initialize-at-run-time=io.netty.channel.unix.Socket --initialize-at-run-time=io.netty.channel.unix.IovArray --initialize-at-run-time=io.netty.channel.epoll.EpollEventLoop --initialize-at-run-time=io.netty.channel.unix.Errors </buildArgs> </configuration> <executions> <execution> <goals> <goal>native-image</goal> </goals> <phase>package</phase> </execution> </executions> </plugin> <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> </plugin> </plugins> </build> </profile></profiles>
+
 </project>
