@@ -1,3 +1,3 @@
-== Spring Boot with Swagger UI tutorial
+== Handling Files upload and download with a Spring Boot REST Controller
 
-Read this article to learn more: http://www.masterspringboot.com/web/rest-services/swagger-ui-tutorial/
+Read this article to learn more: http://www.masterspringboot.com/web/rest-services/manage-upload-download-of-files-using-rest-and-spring-boot
