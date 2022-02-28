@@ -1,0 +1,3 @@
+== Spring Boot MVC Demo
+
+Learn more here: http://www.masterspringboot.com/web/developing-web-applications/creating-an-mvc-application-using-spring-boot

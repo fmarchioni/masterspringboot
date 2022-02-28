@@ -1,0 +1,31 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML> 
+<html xmlns:th="http://www.thymeleaf.org">
+ <head> <title>Spring Boot Thymeleaf Hello World Example</title> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <link th:href="@{/css/main.css}" rel="stylesheet" /> 
+    <script type="text/javascript" th:src="@{/js/functions.js}"></script>
+</head>
+   <body onload="hello()">
+      <h1>MasterSpringBoot</h1>
+      <h2>Spring Boot Thymeleaf Hello World Example</h2>
+      
+            <table border="1" class="table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="person : ${persons}">
+                        <td th:text="${person.name}"></td>
+                        <td th:text="${person.surname}"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+   </body>
+</html>
