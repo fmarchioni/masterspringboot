@@ -1,0 +1,23 @@
+type Book {
+    id: ID!
+    title: String
+    author: Author
+}
+
+type Author {
+    id: ID!
+    name: String
+    books: [Book]
+}
+
+type Query {
+    allBooks: [Book]
+    findOne(id: ID!): Book
+    allAuthors: [Author]
+}
+
+type Mutation {
+     createBook(
+         title: String
+         author: String): Boolean!
+}
