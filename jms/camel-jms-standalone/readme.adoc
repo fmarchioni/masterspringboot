@@ -1,0 +1,2 @@
+== Camel JMS demo
+Source code for http://www.masterspringboot.com/camel/camel-jms-component-example/
