@@ -1,8 +1,8 @@
 #!/bin/bash
+# on remote container copy and execute the files from there:
+# cd /opt/keycloak/bin/
 
-cd /opt/jboss/keycloak/bin
-
-./kcadm.sh config credentials --server http://localhost:8180/auth --realm master --user admin --password admin
+./kcadm.sh config credentials --server http://localhost:8180 --realm master --user admin --password admin
 ./kcadm.sh create realms -s realm=spring-realm -s enabled=true -o
 ./kcadm.sh create users -r spring-realm -s username=demo -s enabled=true
 ./kcadm.sh set-password -r spring-realm --username demo --new-password demo
