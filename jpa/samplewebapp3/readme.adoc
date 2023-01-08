@@ -1,3 +1,3 @@
-== Spring Boot with JPA example
+== Spring Boot 3 with JPA example
 
 Source code for http://www.masterspringboot.com/data-access/jpa/using-springboot-with-jpa-tutorial
