@@ -2,12 +2,11 @@ package com.example.cruddemo.repositories;
 
 import com.example.cruddemo.entities.Customer;
 
-import java.util.List;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public interface CustomerRepository extends CrudRepository<Customer, Long> {
+import java.util.List;
+
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
     
     List<Customer> findByName(String name);
     

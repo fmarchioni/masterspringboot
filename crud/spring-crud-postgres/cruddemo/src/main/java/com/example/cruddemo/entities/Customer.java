@@ -12,10 +12,9 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     @NotBlank(message = "Name is required")
     private String name;
-
-
 
     @NotBlank(message = "Surname is required")
     private String surname;

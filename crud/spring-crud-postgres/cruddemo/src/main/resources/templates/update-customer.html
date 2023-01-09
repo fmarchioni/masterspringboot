@@ -12,7 +12,7 @@
             <h2>Update Customer</h2>
             <div class="row">
                 <div>
-                    <form action="#" th:action="@{/update/{id}(id=${customer.id})}" th:object="${customer}" method="post">
+                    <form action="#" th:action="@{/{id}(id=${customer.id})}" th:object="${customer}" method="put">
                         <div class="row">
                             <div>
                                 <label for="name" >Name</label>
