@@ -1,0 +1,4 @@
+== How to return JSON objects as Response in Spring Boot
+
+Read more here: http://www.masterspringboot.com/web/rest-services/how-to-return-json-objects-as-response-in-spring-boot/
+
