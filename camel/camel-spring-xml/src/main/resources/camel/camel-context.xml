@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns="http://camel.apache.org/schema/spring">
+  <!-- TODO: Add the XML DSL route -->
+  <route id="XML DSL route">	
+    <from uri="direct:log_body"/>	
+    <log message="Got the following message: ${body}"/>	
+    <to uri="mock:next_service"/> 
+  </route>
+</routes>
