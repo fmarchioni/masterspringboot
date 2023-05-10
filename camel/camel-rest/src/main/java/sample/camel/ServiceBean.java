@@ -8,5 +8,6 @@ public class ServiceBean {
         return user;
     }
     
-
-}
+   public String hello(String name) {
+           return "Hello "+name;
+} }

@@ -20,6 +20,7 @@ import java.util.UUID;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
+import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
 
 /**
@@ -36,15 +37,11 @@ public class RestRoute extends RouteBuilder {
 		restConfiguration().component("servlet").bindingMode(RestBindingMode.auto);
 
 		rest().path("/rest").consumes("application/json").produces("application/json")
-				.get().to("direct:hello")
+				.get("{name}").to("bean:serviceBean?method=hello(${headers.name})")
 
 				 .post().type(User.class).outType(User.class)  
-				 .to("bean:serviceBean");
+				 .to("bean:serviceBean?method=response");
+		} 
 		 
-		from("direct:hello").transform().constant("Hello World");
-		
-		 
-
-	}
 
 }
