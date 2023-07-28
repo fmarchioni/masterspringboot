@@ -48,6 +48,5 @@ public class ClientsApplication {
  
 }
 
-record Customer(String name, String address) {
-}
+record Customer(String name, String address) { }
 

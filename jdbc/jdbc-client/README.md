@@ -1,4 +1,4 @@
-# spring-framework-61-clients
+## Spring 6 Sample JDBCClient
 
-Hi, Spring fans! In this installment we look  at the new `JdbcClient` and `RestClient` in Spring Framework 6.1
+Source: http://www.masterspringboot.com/data-access/jdbc-template/getting-started-with-spring-6-jdbcclient-api/
 
