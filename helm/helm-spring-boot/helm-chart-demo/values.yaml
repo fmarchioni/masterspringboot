@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  pullPolicy: Always
+  repository: quay.io/fmarchio/demo
+  tag: latest
+
+service:
+  type: NodePort
+  port: 9899
+

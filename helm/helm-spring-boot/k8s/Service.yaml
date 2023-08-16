@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: helm-chart-demo-svc
+spec:
+  selector:
+    app: helm-chart-demo
+  ports:
+    - protocol: "TCP"
+      port: 9899
+      targetPort: 9899
+  type: NodePort

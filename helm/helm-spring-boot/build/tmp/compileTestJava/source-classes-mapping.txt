@@ -1,0 +1,2 @@
+com/example/HelmChartDemoApplicationTests.java
+ com.example.HelmChartDemoApplicationTests

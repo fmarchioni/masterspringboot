@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-chart-demo
+spec:
+  selector:
+    matchLabels:
+      app: helm-chart-demo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: helm-chart-demo
+    spec:
+      containers:
+        - name: helm-chart-demo
+          image: helm-chart-demo-docker-img:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9899

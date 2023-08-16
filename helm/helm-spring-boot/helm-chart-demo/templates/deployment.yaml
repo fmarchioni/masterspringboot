@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "helm-chart-demo.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: helm-chart-demo
+  template:
+    metadata:
+      labels:
+        app: helm-chart-demo
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 9899
+          envFrom:  # Use envFrom to reference the ConfigMap
+            - configMapRef:
+                name: my-config  # oc create configmap my-config --from-literal=VAR1=config1 --from-literal=VAR2=config2  
