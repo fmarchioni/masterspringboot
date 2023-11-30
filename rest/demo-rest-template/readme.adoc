@@ -1,0 +1,3 @@
+== Spring Boot REST Template demo
+
+Reference: http://www.masterspringboot.com/web/rest-services/getting-started-with-spring-boot-resttemplate/
