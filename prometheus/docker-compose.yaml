@@ -1,0 +1,15 @@
+version: '3'
+services:
+    prometheus:
+        container_name: prometheus
+        image: prom/prometheus
+        extra_hosts: [ 'host.docker.internal:host-gateway' ]
+        restart: always
+        command:
+            - --config.file=/etc/prometheus/prometheus.yml
+        volumes:
+            - ./config/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+        ports:
+            - 9090:9090
+
+           
