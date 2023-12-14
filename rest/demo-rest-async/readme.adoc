@@ -1,0 +1,3 @@
+== Spring Boot REST Async Controller example
+
+read more: http://www.masterspringboot.com/web/rest-services/spring-boot-async-rest-controller-an-example/
