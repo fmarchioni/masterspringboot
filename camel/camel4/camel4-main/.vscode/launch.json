@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "com.sample.MainApp",
+            "projectName": "camel4-demo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) with Arguments Prompt",
+            "request": "launch",
+            "mainClass": "com.sample.App",
+            "args": "arg1 arg2",
+            "vmArgs": "-Xms1g -Xmx1g"
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+== Camel 4 Main example
+
+Read more: https://www.masterspringboot.com/camel/getting-started-with-camel-4/
