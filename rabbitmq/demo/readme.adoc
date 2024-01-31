@@ -1,0 +1,3 @@
+# Spring Boot and RabbitMQ example
+
+Article: http://www.masterspringboot.com/messaging/rabbitmq/spring-boot-and-rabbitmq-made-simple/
