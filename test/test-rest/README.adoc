@@ -1,3 +1,3 @@
 == Spring Boot with REST Assured demo
 
-* Source code for this tutorial: http://www.masterspringboot.com/getting-started/testing-spring-boot/testing-spring-boot-with-rest-assured
+* Read more here: https://www.mastertheboss.com/jboss-frameworks/spring/testing-spring-boot-with-restassured/

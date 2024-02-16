@@ -1,15 +1,20 @@
 package com.example.testrest;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Customer {
 
-    private int id;
-    private String name;
 
-    public Customer(int id, String name) {
-        super();
-        this.id = id;
-        this.name = name;
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
+  private String name;
+
+    
 
     public String getName() {
         return name;
@@ -18,12 +23,12 @@ public class Customer {
     public void setName(String name) {
         this.name = name;
     }
-
-    public int getId() {
+ 
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
