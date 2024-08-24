@@ -1,0 +1,21 @@
+server:
+  address: 0.0.0.0
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - metrics
+          - prometheus
+spring:
+  application:
+    name: eureka-server
