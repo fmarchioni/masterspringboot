@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: user-service
+
+logging:
+  level:
+    org.springframework: info
+    io.github.resilience4j: debug
+server:
+  address: 0.0.0.0
+  port: 9082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,metrics,prometheus"
+  info:
+    env:
+      enabled: true
+    build:
+      enabled: true
+    git:
+      enabled: true
+    java:
+      enabled: true
+
+

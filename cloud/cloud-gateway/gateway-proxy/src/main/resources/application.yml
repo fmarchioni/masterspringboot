@@ -1,0 +1,26 @@
+server:
+  address: 0.0.0.0
+  port: 9083
+spring:
+  application:
+    name: proxy
+
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+
+  instance:
+    prefer-ip-address: true
+logging:
+  level:
+    org.springframework: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - metrics
+          - prometheus
